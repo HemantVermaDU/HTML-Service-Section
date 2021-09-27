@@ -1,0 +1,123 @@
+
+:root{
+	--primary-bg-color: #eee;
+	--secondary-bg-color: #fff;
+	--primary-text-color: #666;
+	--secondary-text-color: #999;
+}
+body.active{
+	--primary-bg-color: #222;
+	--secondary-bg-color: #333;
+	--primary-text-color: #fff;
+	--secondary-text-color: #eee;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all .2s linear;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	padding: 20px 9%;
+	background: var(--primary-bg-color);
+	padding-bottom: 80px;
+}
+.container .title{
+	text-align: center;
+	color:var(--primary-text-color);
+	font-size: 50px;
+	padding: 15px 0;
+	text-transform: uppercase;
+}
+.container .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	}
+
+.container .box-container .box{
+	flex:1 1 300px;
+	text-align: center;
+	background: var(--secondary-bg-color);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.container .box-container .box i{
+	font-size: 40px;
+	height: 80px;
+	width: 80px;
+	line-height: 80px;
+	background: rgba(0, 0, 0,.1);
+	border-radius: 50%;
+	margin: 10px 0;
+	color: var(--primary-text-color);
+}
+
+.container .box-container .box h3{
+	font-size: 25px;
+	color: var(--primary-text-color);
+}
+
+.container .box-container .box p{
+	font-size:18px ;
+	color: var(--secondary-text-color);
+	padding: 5px;
+}
+
+.container .box-container .box::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	transition: .3s linear;
+	background: #ff0077;
+	clip-path: circle(28% at 5% 0);
+}
+
+.container .box-container .box:hover::before{
+	clip-path: circle(100%);
+}
+
+.container .box-container .box:hover > *{
+	color: #fff;
+}
+
+
+#theme-toggler{
+position: fixed;
+top: 15px;
+right: 25px;
+padding: 15px 20px;
+font-size: 30px;
+background:var(--secondary-bg-color) ;
+color: var(--primary-text-color);
+cursor: pointer;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+z-index:1;
+}
+
+#theme-toggler:hover{
+	background: #ff0077;
+	color: #fff;
+}
+
+@media(max-width:768px){
+	.container{
+		padding: 100px 20px;
+	}
+	.container .title{
+		font-size: 35px;
+	}
+}

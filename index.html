@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Service Section</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="theme-toggler" class="fas fa-moon">
+</div>
+<div class="container">
+	<h3 class="title">Our Services</h3>
+	<div class="box-container">
+	<div class="box">
+		<i class="fas fa-code "></i>
+		<h3>Web Design & Development</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
+	</div>
+		<div class="box">
+		<i class="fas fa-camera"></i>
+		<h3>iOS Application Development</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.
+			</p>
+	</div>
+		<div class="box">
+		<i class="fas fa-bullhorn"></i>
+		<h3>Android Application Development</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.
+		</p>
+	</div>
+		<div class="box">
+		<i class="fas fa-cog"></i>
+		<h3>Web Development</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
+	</div>
+		<div class="box">
+		<i class="fas fa-heart"></i>
+		<h3>User Interface Design</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
+	</div>
+		<div class="box">
+		<i class="fas fa-globe"></i>
+		<h3>Responsive Design</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.
+	</p>
+	</div>
+	</div>
+</div>
+
+	<script>
+	let themeToggler=document.querySelector('#theme-toggler');
+	themeToggler.onclick=() =>{
+	themeToggler.classList.toggle('fa-sun');
+	if(themeToggler.classList.contains('fa-sun')){
+		document.body.classList.add('active');
+	}else{
+		document.body.classList.remove('active');
+	}
+	}
+	</script>
+</body>
+</html>
